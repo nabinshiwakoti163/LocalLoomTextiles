@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery — LocalLoom Textiles</title>
+  <meta name="description" content="Gallery of LocalLoom Textiles: artisan weaving process, products, and natural textures.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">LocalLoom Textiles</span>
+      </a>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="section">
+    <h1>Gallery</h1>
+    <p class="lead">Click any image to expand. Use ← and → keys to navigate, and Esc to close.</p>
+
+    <div class="gallery">
+      <a href="assets/img/artisan at work.jpg" data-lightbox><img src="assets/img/artisan at work.jpg" alt="Artisan weaving on a traditional loom"></a>
+      <a href="assets/img/natural textile.jpg" data-lightbox><img src="assets/img/natural textile.jpg" alt="Close-up of natural textile textures"></a>
+      <a href="assets/img/uncycle bag.jpg" data-lightbox><img src="assets/img/uncycle bag.jpg" alt="Upcycled bag detail"></a>
+      <a href="assets/img/localloom.jpg" data-lightbox><img src="assets/img/localloom.jpg" alt="LocalLoom brand hero art"></a>
+      <a href="assets/img/Pattern Scarf.jpg" data-lightbox><img src="assets/img/Pattern Scarf.jpg" alt="Handwoven scarf"></a>
+      <a href="assets/img/Earth sari.jpg" data-lightbox><img src="assets/img/Earth sari.jpg" alt="Eco sari design"></a>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        © <span id="year"></span> LocalLoom Textiles • <span class="small">Sustainably crafted with care.</span>
+      
+      </div>
+      
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

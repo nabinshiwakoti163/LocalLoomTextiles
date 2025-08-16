@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — LocalLoom Textiles</title>
+  <meta name="description" content="Contact LocalLoom Textiles. We'd love to hear from you.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header section containing site navigation and branding -->
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">LocalLoom Textiles</span>
+      </a>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content section containing the contact form and location details -->
+  <main id="main" class="section">
+    <h1>Contact Us</h1>
+    <p class="lead">Send us a message and we’ll get back to you shortly.</p>
+
+    <!-- Contact form for users to send messages -->
+    <form id="contactForm" class="form" action="mailto:hello@localloom.example" method="post" enctype="text/plain" novalidate aria-describedby="formHelp">
+      <p id="formHelp" class="small">Fields marked with * are required.</p>
+
+      <!-- Name field: required, minimum length of 2 characters -->
+      <div class="field">
+        <label for="name">Name *</label>
+        <input id="name" name="name" type="text" required minlength="2" data-validate aria-required="true" placeholder="Enter your full name">
+        <div class="error-msg" aria-live="polite"></div>
+      </div>
+
+      <!-- Email field: required, must follow email pattern -->
+      <div class="field">
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required data-validate aria-required="true" inputmode="email" autocomplete="email" placeholder="example@domain.com">
+        <div class="error-msg" aria-live="polite"></div>
+      </div>
+
+      <!-- Subject field: required, minimum length of 3 characters -->
+      <div class="field">
+        <label for="subject">Subject *</label>
+        <input id="subject" name="subject" type="text" required minlength="3" data-validate aria-required="true" placeholder="Brief subject">
+        <div class="error-msg" aria-live="polite"></div>
+      </div>
+
+      <!-- Message field: required, minimum length of 10 characters -->
+      <div class="field">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" required minlength="10" data-validate aria-required="true" placeholder="Write your message here..."></textarea>
+        <div class="error-msg" aria-live="polite"></div>
+      </div>
+
+      <!-- Submit button -->
+      <div class="field">
+        <button class="btn" type="submit">Send Message</button>
+      </div>
+
+      <!-- Confirmation message after submission -->
+      <p id="formSuccess" class="success hidden" role="status">Thanks! Your message has been noted for this prototype.</p>
+    </form>
+
+    <!-- Location section displaying physical store location and embedded map -->
+    <section class="section" aria-label="Location">
+      <h2>Our Location</h2>
+      <p class="small">This is our physical store location.</p>
+      <div class="map-container">
+        <!-- Embedded Google Map showing the store's physical address -->
+        <iframe 
+          width="100%" 
+          height="400" 
+          frameborder="0" 
+          scrolling="no" 
+          marginheight="0" 
+          marginwidth="0" 
+          src="https://maps.google.com/maps?q=22%2F25%20Clarence%20Street%2C%20Lidcombe%20NSW%202141%2C%20Australia&t=&z=15&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+      </div>
+      <div class="hero-card">
+        <p><strong>LocalLoom </strong><br> 24/25 Lidcombe, Sydney NSW<br> Australia</p>
+        <p>Email: <a href="mailto:nabinshiwakoti59@gmail.com">nabinshiwakoti59@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section with copyright and sustainability message -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        © <span id="year"></span> LocalLoom Textiles • <span class="small">Sustainably crafted with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <!-- Script dynamically sets the current year in the footer -->
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

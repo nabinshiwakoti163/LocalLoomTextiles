@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products — LocalLoom Textiles</title>
+  <meta name="description" content="Explore eco-friendly, handwoven products by LocalLoom Textiles: scarves, saris, bags, and more.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">LocalLoom Textiles</span>
+      </a>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="section">
+    <header>
+      <h1>Our Products</h1>
+      <p class="lead">Handwoven pieces crafted with natural fibres and ethical processes.</p>
+    </header>
+
+    <button onclick="console.log(cart)">View Cart (Console)</button>
+
+    <div class="filters" role="group" aria-label="Filter products">
+      <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="women">Women</button>
+      <button class="filter-btn" data-filter="men">Men</button>
+      <button class="filter-btn" data-filter="accessories">Accessories</button>
+    </div>
+
+    <div class="grid" data-products>
+      <article class="card" data-category="accessories">
+        <img src="assets/img/Autunum scarf.jpg" alt="Handwoven scarf in natural tones">
+        <div class="p">
+          <h3>Autumn Scarf</h3>
+          <p>Soft, breathable weave with plant-based dyes.
+Perfect for crisp mornings, this scarf adds warmth and elegance to any outfit.</p>
+          <p class="price">$49</p>
+          <button class="btn add-to-cart" onclick="addToCart('Autumn Scarf', 49)">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="women">
+        <img src="assets/img/Earth sari.jpg" alt="Eco-friendly sari in earthy palette">
+        <div class="p">
+          <h3>Earth Sari</h3>
+          <p>Classic drape reimagined in organic cotton.
+Celebrate tradition with eco-conscious comfort and timeless beauty.</p>
+          <p class="price">$119</p>
+          <button class="btn add-to-cart" onclick="addToCart('Earth Sari', 119)">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="accessories">
+        <img src="assets/img/uncycle bag.jpg" alt="Upcycled tote bag">
+        <div class="p">
+          <h3>Upcycled Tote</h3>
+          <p>Durable carryall from reclaimed textiles.
+Spacious and sustainable  ideal for market trips or daily essentials.
+</p>
+          <p class="price">$39</p>
+          <button class="btn add-to-cart" onclick="addToCart('Upcycled Tote', 39)">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="men">
+        <img src="assets/img/Handloom Shirt.jpg" alt="Handloom shirt fabric texture">
+        <div class="p">
+          <h3>Handloom Shirt</h3>
+          <p>Breathable weave, everyday comfort.
+Crafted for style and ease, with an artisanal touch in every thread.</p>
+          <p class="price">$69</p>
+          <button class="btn add-to-cart" onclick="addToCart('Handloom Shirt', 69)">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="women">
+        <img src="assets/img/Weave Wrap.jpg" alt="Weave pattern close-up">
+        <div class="p">
+          <h3>Weave Wrap</h3>
+          <p>Versatile wrap, cozy and lightweight.
+Wrap yourself in comfort ideal for layering or lounging in style..</p>
+          <p class="price">$54</p>
+          <button class="btn add-to-cart" onclick="addToCart('Weave Wrap', 54)">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card" data-category="accessories">
+        <img src="assets/img/Pattern Scarf.jpg" alt="Patterned scarf detail">
+        <div class="p">
+          <h3>Pattern Scarf</h3>
+          <p>Geometric motifs inspired by nature.
+A bold statement piece woven with purpose and beauty..</p>
+          <p class="price">$52</p>
+          <button class="btn add-to-cart" onclick="addToCart('Pattern Scarf', 52)">Add to Cart</button>
+        </div>
+      </article>
+    </div>
+
+    <section class="cart-section">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <button class="btn" onclick="checkoutCart()">Buy Now</button>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+       © <span id="year"></span> LocalLoom Textiles • <span class="small">Sustainably crafted with care.</span>
+      
+      </div>
+      
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+  const cart = [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    alert(name + ' has been added to your cart.');
+    updateCartDisplay();
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartDisplay();
+  }
+
+  function updateCartDisplay() {
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = '<li>Your cart is empty.</li>';
+      return;
+    }
+
+    cart.forEach((item, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        ${item.name} - $${item.price} 
+        <button onclick="removeFromCart(${index})">Remove</button>
+      `;
+      cartItems.appendChild(li);
+    });
+  }
+
+  function checkoutCart() {
+    if (cart.length === 0) {
+      alert('Your cart is empty. Please add products before buying.');
+      return;
+    }
+
+    let summary = 'Thank you for your purchase!\n\nYour order summary:\n';
+    let total = 0;
+    cart.forEach(item => {
+      summary += `${item.name} - $${item.price}\n`;
+      total += item.price;
+    });
+    summary += `\nTotal: $${total}`;
+    alert(summary);
+
+    // Clear cart
+    cart.length = 0;
+    updateCartDisplay();
+  }
+  </script>
+</body>
+</html>

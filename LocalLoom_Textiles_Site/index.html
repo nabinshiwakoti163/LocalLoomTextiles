@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LocalLoom Textiles — Handwoven, eco-friendly clothing and textiles</title>
+  <meta name="description" content="LocalLoom Textiles offers ethically made, handcrafted garments and textiles that support local weavers and promote sustainability.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header & Navigation -->
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name" style="color:white;">LocalLoom Textiles</span>
+      </a>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Starts -->
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Intro">
+      <div class="hero-card">
+        <span class="kicker">Sustainable Fashion</span>
+        <h1>Handwoven, eco-friendly clothing and textiles</h1>
+
+        <p class="lead">
+          At LocalLoom Textiles, we believe that fashion should be as kind to the planet as it is beautiful to wear. 
+          Our garments and home textiles are lovingly handwoven by skilled artisans using eco-friendly practices 
+          that support both the environment and local communities. Every thread tells a story — a story of tradition, 
+          sustainability, and social responsibility.
+        </p>
+
+        <p class="lead">
+          We source natural and organic fibres such as cotton, hemp, and bamboo, all dyed with plant-based or low-impact 
+          dyes. Our artisans use traditional handlooms to create textiles that are both unique and gentle on the earth. 
+          This not only reduces energy consumption and emissions, but also helps preserve endangered craft techniques 
+          passed down through generations.
+        </p>
+
+        <!-- Call to Action Buttons -->
+        <div class="cta">
+          <a class="btn" href="products.html">Explore Products</a>
+          <a class="btn alt" href="#ethos">Our Values</a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <figure class="hero-illustration" aria-hidden="true">
+        <img 
+          src="assets/img/localloom.jpg" 
+          alt="LocalLoom Textiles logo" 
+          style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;"
+        >
+      </figure>
+    </section>
+
+    <!-- Ethical by Design Section -->
+    <section class="section" id="ethos" aria-label="Values">
+      <h2>Ethical by design</h2>
+      <div class="grid">
+        
+        <!-- Card 1: Artisan Made -->
+        <article class="card">
+          <img src="assets/img/artisan at work.jpg" alt="Artisan weaving on a traditional loom">
+          <div class="p">
+            <h3>Artisan Made</h3>
+            <p>
+              Every piece is meticulously handcrafted by skilled artisans using traditional techniques passed down through generations. 
+              We provide long-term employment and fair wages to ensure economic empowerment and preserve cultural heritage. 
+              Supporting these artisans allows us to celebrate craftsmanship while building resilient local economies. 
+              We believe in slow fashion—timeless, meaningful garments made with heart and soul.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2: Natural Materials -->
+        <article class="card">
+          <img src="assets/img/natural textile.jpg" alt="Close-up of natural textile textures">
+          <div class="p">
+            <h3>Natural Materials</h3>
+            <p>
+              Our textiles are made from organically grown cotton, bamboo, hemp, and other plant-based fibers. 
+              We strictly avoid synthetic blends, microplastics, and chemical-heavy treatments. 
+              Our dyes are non-toxic and eco-friendly, derived from plants and minerals. 
+              This ensures our garments are safe for your skin, biodegradable, and leave the smallest possible ecological footprint.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3: Thoughtful Design -->
+        <article class="card">
+          <img src="assets/img/uncycle bag.jpg" alt="Handcrafted upcycled bag">
+          <div class="p">
+            <h3>Thoughtful Design</h3>
+            <p>
+              We design for comfort, functionality, and longevity. Our minimalist silhouettes and versatile palettes suit all genders, 
+              seasons, and lifestyles. By focusing on timeless styles rather than trends, we encourage mindful purchasing habits. 
+              Each product is thoroughly tested for durability and wearability to ensure it remains a staple in your wardrobe for years to come.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        © <span id="year"></span> LocalLoom Textiles • <span class="small">Sustainably crafted with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dynamic Footer Year Script -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
